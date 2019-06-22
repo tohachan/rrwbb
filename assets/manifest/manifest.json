@@ -1,7 +1,7 @@
 {
     "name": "react redux webpack babel build",
     "short_name": "rrwbb",
-    "start_url": "http://localhost:3000/",
+    "start_url": "https://rrwbb.com/",
     "icons": [
         {
             "src": "/images/favicons/android-chrome-192x192.png",

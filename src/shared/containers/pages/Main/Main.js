@@ -12,7 +12,11 @@ import {
     FaExclamationTriangle,
     FaGlobe,
     FaHandPointRight,
+    FaCode,
 } from "react-icons/fa";
+
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyImage } from "react-lazy-images";
 
 import { FormattedMessage } from 'react-intl';
 
@@ -153,6 +157,51 @@ function Main () {
                                     <span>Even this bundle uses Bulma with several components imported, main .css file size is around ~20Kb without gzip (around ~170Kb without purge css).</span><br />
                                     <span className="has-background-warning"><FaExclamationTriangle />Purge css is disabled in dev mode</span>
                                 </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section className="section">
+                <div className="container">
+                    <h2 className="title is-2">Performance</h2>
+
+                    <div className="box features">
+                        <ul className="features__list">
+                            <li>
+                                <p>
+                                    <FaGoogle /> <strong>Pass Google Lighthouse with green scores</strong>
+                                </p>
+
+                                <div>
+                                    <LazyImage
+                                        src="/images/lh_score.png"
+                                        alt="Lighthouse score"
+                                        placeholder={({ imageProps, ref }) => (
+                                            <img ref={ref} src="https://via.placeholder.com/732x396.png" alt={imageProps.alt} />
+                                        )}
+                                        actual={({ imageProps }) => <img {...imageProps} />}
+                                    />
+                                </div>
+
+                                <p className="m-b-lg">Using just $5/mo drpolet on Digitalocean and free Cloudflare service</p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <FaCode /> <strong>Low rate of unused code</strong>
+                                </p>
+
+                                <div>
+                                    <LazyImage
+                                        src="/images/used_code.png"
+                                        alt="Lighthouse score"
+                                        placeholder={({ imageProps, ref }) => (
+                                            <img ref={ref} src="https://via.placeholder.com/1194x170.png" alt={imageProps.alt} />
+                                        )}
+                                        actual={({ imageProps }) => <img {...imageProps} />}
+                                    />
+                                </div>
                             </li>
                         </ul>
                     </div>

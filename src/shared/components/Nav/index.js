@@ -23,9 +23,14 @@ function Nav (props) {
         <nav className="navbar is-warning is-fixed-top">
             <div className="container">
                 <div className="navbar-brand">
-                    <Link className="navbar-item" to="/">
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://rrwbb.com"
+                        className="navbar-item"
+                        >
                         <img src="/images/rwb_colorless.svg" alt="RWB logo" />
-                    </Link>
+                    </a>
 
                     <span
                         onClick={() => setOpen(!open)}
