@@ -6,5 +6,5 @@
     "isDev": false,
     "needConsole": false,
     "useCompression": true,
-    "useOfflinePlugin": true
+    "useOfflinePlugin": false
 }

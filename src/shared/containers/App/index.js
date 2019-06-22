@@ -22,10 +22,10 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 
 const App = (props) => {
     useEffect(() => {
-        console.log('App rerender');
+        // console.log('App rerender');
     });
     useEffect(() => {
-        console.log('App init');
+        // console.log('App init');
 
         // We have to sync persisted state since server data and persisted data might be differrent
         if (props.global.locale) {
