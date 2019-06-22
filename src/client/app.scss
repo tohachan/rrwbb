@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+$family-sans-serif: "Nunito", sans-serif;
+$footer-padding: 3rem 1.5rem;
+
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/grid/columns.sass";
+
+@import "bulma/sass/layout/section.sass";
+@import "bulma/sass/layout/hero.sass";
+@import "bulma/sass/layout/footer.sass";
+
+@import "bulma/sass/components/navbar.sass";
+@import "bulma/sass/components/tabs.sass";
+@import "bulma/sass/components/message.sass";
+
+@import "bulma/sass/elements/container.sass";
+@import "bulma/sass/elements/button.sass";
+@import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/box.sass";
+
+html, body {
+    // background-color: $background;
+}
+
+.main-container {
+    max-width: none;
+}
+.hero.is-fullheight {
+    .hero-body {
+        &.hero-body_main {
+            padding-left: 0;
+            padding-right: 0;
+            align-items: flex-start;
+        }
+    }
+}
+
+.button {
+    > svg {
+        margin-right: 0.5rem;
+    }
+}
+
+p,
+li,
+span {
+    > svg {
+        vertical-align: middle;
+        margin-top: -0.25rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+}
+
+.message-header {
+    > p {
+        margin-bottom: 0;
+    }
+}
+p {
+    margin-bottom: 1rem;
+}
+
+// Placeholders
+.placeholder {
+    width: 100%;
+
+    h2,
+    p {
+        background-color: #eaeaea;
+        font-family: sans-serif;
+        overflow: hidden;
+        position: relative;
+
+        min-height: 1rem;
+
+        &:after {
+            -webkit-animation: placeholderAnimation 1s infinite;
+            animation: placeholderAnimation 1s infinite;
+            background: -webkit-gradient(linear, left top, right top, from(#eaeaea), color-stop(#fafafa), to(#eaeaea));
+            background: linear-gradient(to right, #eaeaea, #fafafa, #eaeaea);
+            content: '';
+            left: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    h2 {
+        min-height: 1.5rem;
+    }
+}
+
+.placeholder__xsmall {
+    width: 35%;
+}
+
+.placeholder__small {
+    width: 50%;
+}
+
+.placeholder__medium {
+    width: 75%;
+}
+
+.placeholder__large {
+    width: 85%;
+}
+
+@-webkit-keyframes placeholderAnimation {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+}
+@keyframes placeholderAnimation {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+// Spacing
+$sizeUnit: rem;
+$marginKey: 'm';
+$paddingKey: 'p';
+$separator: '-';
+$sizes: (
+    ('none', 0),
+    ('xxs', 0.125),
+    ('xs', 0.25),
+    ('sm', 0.5),
+    ('md', 1),
+    ('lg', 2.3),
+    ('xl', 4),
+    ('xxl', 8),
+);
+$positions: (
+    ('t', 'top'),
+    ('r', 'right'),
+    ('b', 'bottom'),
+    ('l', 'left')
+);
+
+@function sizeValue($key, $value) {
+    @return if($key == 'none', 0, $value + $sizeUnit);
+}
+
+@each $size in $sizes {
+    $sizeKey: nth($size, 1);
+    $sizeValue: nth($size, 2);
+    .#{$marginKey}#{$separator}#{$sizeKey} {
+        margin: sizeValue($sizeKey, $sizeValue);
+    }
+    .#{$paddingKey}#{$separator}#{$sizeKey} {
+        padding: sizeValue($sizeKey, $sizeValue);
+    }
+    @each $position in $positions {
+        $posKey: nth($position, 1);
+        $posValue: nth($position, 2);
+        .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+            margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+        }
+        .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+            padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+        }
+    }
+}
+// \Spacing

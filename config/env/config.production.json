@@ -1,0 +1,10 @@
+{
+    "api": {
+        "base": "https://api.demo.com/",
+        "proxy": ""
+    },
+    "isDev": false,
+    "needConsole": false,
+    "useCompression": true,
+    "useOfflinePlugin": true
+}
