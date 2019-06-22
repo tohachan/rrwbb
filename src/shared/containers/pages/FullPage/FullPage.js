@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import StaticChunk from './StaticChunk';
-import StaticChunk2 from './StaticChunk2';
+import StaticChunk from 'shared/containers/pages/FullPage/StaticChunk';
+import StaticChunk2 from 'shared/containers/pages/FullPage/StaticChunk2';
 import DynamicChunk from 'shared/containers/pages/FullPage/dynChankLoader';
 
 import { WithReducer } from 'shared/components/WithReducer';
