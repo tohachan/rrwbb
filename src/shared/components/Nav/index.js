@@ -61,7 +61,12 @@ function Nav (props) {
                             >Full Page</Link>
 
                         <span className="navbar-item">
-                            <a target="_blank" href="https://github.com/tohachan/rrwbb" className="button is-light is-inverted">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://github.com/tohachan/rrwbb"
+                                className="button is-light is-inverted"
+                                >
                                 <FaGithub />
 
                                 <span>Github</span>

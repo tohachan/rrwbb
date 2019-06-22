@@ -81,7 +81,7 @@ const App = (props) => {
             <footer className="footer">
                 <div className="content has-text-centered">
                     <p>
-                        <strong>RWB Setup</strong> by @tohachan. Made with
+                        <strong>RRWBB</strong> by @tohachan. Made with
                         <FaHeart className="has-text-danger" />
                     </p>
                 </div>

@@ -19,7 +19,7 @@
         "build": "rimraf ./build && npm run build:client && npm run build:server",
         "build:server": "webpack --config ./config/webpack/webpack.server.prod.config.js",
         "build:client": "webpack --config ./config/webpack/webpack.client.prod.config.js",
-        "prod": "cross-env NODE_ENV=production npm run build && nodemon build/bundle.js",
+        "prod": "cross-env NODE_ENV=production npm run build && node build/bundle.js",
         "start:prod": "node build/bundle.js"
     },
     "devDependencies": {
