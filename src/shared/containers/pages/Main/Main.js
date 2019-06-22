@@ -46,6 +46,16 @@ function Main () {
             </section>
             <section className="section">
                 <div className="container">
+                    <h2 className="title is-2">What is this?</h2>
+
+                    <p className="m-b-lg">This is a starter pack for build front end application of any (probably) complexity.</p>
+                </div>
+                <div className="container">
+                    <h2 className="title is-2">Why you might need this?</h2>
+
+                    <p className="m-b-lg">Because it can save a lot of time when you need to start your next project.</p>
+                </div>
+                <div className="container">
                     <h2 className="title is-2">Motivation</h2>
 
                     <p>My goal was to create setup for future project without too much of "black box" solutions and with support of all requred features for production.</p>
@@ -261,7 +271,7 @@ function Main () {
                     <pre className="m-b-md">npm run prod</pre>
 
                     <p>Build and analyze bundle size: </p>
-                    <pre className="m-b-md">npm run prod</pre>
+                    <pre className="m-b-md">npm run analyze</pre>
 
                     <p>Build without start: </p>
                     <pre className="m-b-md">npm run build</pre>

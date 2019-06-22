@@ -3,6 +3,17 @@
 #### Yet another one setup with multiple nice features
 &nbsp;
 ##### [See demo](https://rrwbb.com/)
+&nbsp;
+
+### What is this?
+This is a starter pack for build front end application of any (probably) complexity.
+
+### Why you might need this?
+Because it can save a lot of time when you need to start your next project.
+
+### Motivation
+My goal was to create setup for future project without too much of "black box" solutions and with support of all requred features for production.
+I mostly borrow all the ideas from all around the Internet and put them all together.
 
 ## Includes
 - webpack 4
