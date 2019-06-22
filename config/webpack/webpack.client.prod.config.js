@@ -56,13 +56,13 @@ const config = {
         new PurgecssPlugin({
             paths: glob.sync(path.join(appDirectory, 'src') + '/**/*',  { nodir: true }),
         }),
-        new OfflinePlugin({
-            responseStrategy: "network-first",
-            ServiceWorker: {
-                scope: "http://localhost:3000/"
-            },
-            publicPath: "/"
-        })
+        // new OfflinePlugin({
+        //     responseStrategy: "network-first",
+        //     ServiceWorker: {
+        //         scope: "http://localhost:3000/"
+        //     },
+        //     publicPath: "/"
+        // })
     ],
 
     optimization: {
