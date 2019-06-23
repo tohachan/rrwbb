@@ -20,7 +20,7 @@ import fullpageSaga, { doGetComments, doGetPosts } from './saga';
 import { getPost } from 'shared/containers/App/actions';
 import { getComments, getPosts } from './actions';
 
-import Placeholder from './placeholder';
+import TextPlaceholder from 'shared/components/TextPlaceholder';
 
 function FullPage (props) {
     useEffect(() => {
@@ -81,7 +81,7 @@ function FullPage (props) {
                         </div>
 
                         <div className={comments.length ? "m-t-lg" : ""}>
-                            {commentsLoading ? (<Placeholder />) : commentsHtml}
+                            {commentsLoading ? (<TextPlaceholder />) : commentsHtml}
                         </div>
                     </div>
 
@@ -110,7 +110,7 @@ function FullPage (props) {
 
                         <h3 className="title">Dynamic data from GET https://jsonplaceholder.typicode.com/posts api call</h3>
                         <h4 className="subtitle">This data will be requested by server on page <strong>refresh</strong> or by client if opened from another page</h4>
-                        {posts.length ? listHtml : (<Placeholder />)}
+                        {posts.length ? listHtml : (<TextPlaceholder />)}
                     </div>
                 </div>
             </section>

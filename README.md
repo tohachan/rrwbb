@@ -74,3 +74,8 @@ separate start command (should build first)
 ```javascript
 npm run start:prod
 ```
+
+generate page
+```javascript
+npm run gen page
+```

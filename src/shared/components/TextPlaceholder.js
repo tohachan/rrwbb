@@ -1,6 +1,6 @@
 import React from "react";
 
-function TextLoader () {
+function TextPlaceholder () {
     return (
         <div className="placeholder">
             <h2></h2>
@@ -12,4 +12,4 @@ function TextLoader () {
     );
 }
 
-export default TextLoader;
+export default TextPlaceholder;

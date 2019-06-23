@@ -16,7 +16,6 @@ import {
     FaCode,
 } from "react-icons/fa";
 
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { LazyImage } from "react-lazy-images";
 
 import { FormattedMessage } from 'react-intl';
@@ -279,6 +278,9 @@ function Main () {
 
                     <p>Separate start command (should build first): </p>
                     <pre className="m-b-md">npm run start:prod</pre>
+
+                    <p>Generate page: </p>
+                    <pre className="m-b-md">npm run gen page</pre>
                 </div>
             </section>
         </React.Fragment>

@@ -14,13 +14,14 @@
     ],
     "license": "MIT",
     "scripts": {
-        "analyze": "npm run build && source-map-explorer build/public/main.bundle.*",
         "dev": "rimraf ./build && cross-env NODE_ENV=development node scripts/start-dev.js",
+        "prod": "cross-env NODE_ENV=production npm run build && node build/bundle.js",
         "build": "rimraf ./build && npm run build:client && npm run build:server",
         "build:server": "webpack --config ./config/webpack/webpack.server.prod.config.js",
         "build:client": "webpack --config ./config/webpack/webpack.client.prod.config.js",
-        "prod": "cross-env NODE_ENV=production npm run build && node build/bundle.js",
-        "start:prod": "node build/bundle.js"
+        "start:prod": "node build/bundle.js",
+        "gen": "plop --plopfile generators/index.js",
+        "analyze": "npm run build && source-map-explorer build/public/main.bundle.*"
     },
     "devDependencies": {
         "@babel/core": "7.2.2",
@@ -40,6 +41,7 @@
         "node-sass": "4.11.0",
         "nodemon": "^1.19.1",
         "offline-plugin": "^5.0.7",
+        "plop": "^2.4.0",
         "postcss-loader": "3.0.0",
         "sass-loader": "7.1.0",
         "source-map-explorer": "^2.0.0",

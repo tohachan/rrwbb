@@ -1,9 +1,9 @@
 import React from 'react';
 import loadable from '@loadable/component';
-import Placeholder from './placeholder';
+import TextPlaceholder from 'shared/components/TextPlaceholder';
 
 const Main = loadable(() => import(/* webpackPreload: true */ './Main'), {
-    fallback: <Placeholder />
+    fallback: <TextPlaceholder />
 });
 
 export default Main;
