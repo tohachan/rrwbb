@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { IntlProvider, addLocaleData } from 'react-intl';
 
@@ -27,5 +28,10 @@ const mapStateToProps = state => {
         i18n: state.i18n,
     };
 };
+
+ConnectedIntlProvider.propTypes = {
+    global: PropTypes.object,
+    i18n: PropTypes.object,
+}
 
 export default connect(mapStateToProps)(ConnectedIntlProvider);

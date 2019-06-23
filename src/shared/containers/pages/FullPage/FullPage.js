@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
 import { Helmet } from "react-helmet";
 
 import { connect } from 'react-redux';
@@ -142,6 +143,11 @@ const withConnect = connect(
     mapStateToProps,
     mapDispatchToProps,
 );
+
+FullPage.propTypes = {
+    fullpage: PropTypes.object,
+    dispatch: PropTypes.func,
+}
 
 export default compose(
     WithReducer('fullpage', FullPageReducer),

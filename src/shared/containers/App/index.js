@@ -1,5 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from "react-helmet";
 
 import { withRouter } from 'react-router-dom';
@@ -107,5 +108,12 @@ const withConnect = connect(
     mapStateToProps,
     mapDispatchToProps,
 );
+
+App.propTypes = {
+    global: PropTypes.object,
+    i18n: PropTypes.object,
+    intl: PropTypes.object,
+    dispatch: PropTypes.func,
+}
 
 export default compose(withConnect, hot, injectIntl, withRouter)(App);

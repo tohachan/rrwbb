@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "./main_page.scss";
 
 import {
@@ -282,6 +283,10 @@ function Main () {
             </section>
         </React.Fragment>
     );
+}
+
+Main.propTypes = {
+
 }
 
 export default Main;

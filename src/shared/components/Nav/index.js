@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { FaGithub } from "react-icons/fa";
@@ -91,6 +92,13 @@ function Nav (props) {
             </div>
         </nav>
     );
+}
+
+Nav.propTypes = {
+    locale: PropTypes.string,
+    changeLocale: PropTypes.func,
+    setLocale: PropTypes.func,
+    i18n: PropTypes.object
 }
 
 export default Nav;
