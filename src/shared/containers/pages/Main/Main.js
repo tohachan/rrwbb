@@ -58,7 +58,7 @@ function Main () {
                 <div className="container">
                     <h2 className="title is-2">Motivation</h2>
 
-                    <p>My goal was to create setup for future project without too much of "black box" solutions and with support of all requred features for production.</p>
+                    <p>My goal was to create setup for future projects without too much of "black box" solutions and with support of all requred features for production.</p>
                     <p>I mostly borrow all the ideas from all around the Internet and put them all together.</p>
                 </div>
             </section>
@@ -194,7 +194,7 @@ function Main () {
                                     />
                                 </div>
 
-                                <p className="m-b-lg">Using just $5/mo drpolet on Digitalocean and free Cloudflare service</p>
+                                <p className="m-b-lg">Using just $5/mo droplet on Digitalocean and free Cloudflare service</p>
                             </li>
 
                             <li>

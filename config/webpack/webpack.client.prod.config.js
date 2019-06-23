@@ -68,6 +68,7 @@ const config = {
     optimization: {
         minimizer: [
             new TerserJSPlugin({
+                sourceMap: true,
                 // TerserPlugin config is taken almost entirely from react-scripts
                 terserOptions: {
                     parse: {
