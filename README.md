@@ -1,6 +1,6 @@
 # RRWBB
-
 #### Yet another one setup with multiple nice features
+[![Build Status](https://travis-ci.org/tohachan/rrwbb.svg?branch=master)](https://travis-ci.org/tohachan/rrwbb)
 &nbsp;
 ##### [See demo](https://rrwbb.com/)
 &nbsp;
