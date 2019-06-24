@@ -15,6 +15,9 @@ Because it can save a lot of time when you need to start your next project.
 My goal was to create setup for future projects without too much of "black box" solutions and with support of all requred features for production.
 I mostly borrow all the ideas from all around the Internet and put them all together.
 
+### Requirements
+Required node >=9.0 && <12.4 since right now node-sass have some problem to install with 12.4
+
 ## Includes
 - webpack 4
 - babel 7
