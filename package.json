@@ -1,6 +1,6 @@
 {
     "name": "rrwbb",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "author": "tohachan <toha.chan@cmail.com>",
     "description": "React Webpack Babel setup with SSR, HMR and Code splitting",
     "keywords": [

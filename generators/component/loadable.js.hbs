@@ -1,0 +1,9 @@
+import React from 'react';
+import loadable from '@loadable/component';
+import TextPlaceholder from 'shared/components/TextPlaceholder';
+
+const {{name}} = loadable(() => import(/* webpackPreload: true */ './{{name}}'), {
+    fallback: <TextPlaceholder />
+});
+
+export default {{name}};

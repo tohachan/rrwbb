@@ -31,6 +31,7 @@ I mostly borrow all the ideas from all around the Internet and put them all toge
 - Scss with code splitting support
 - Css load optimization
 - Bulma
+- Basic scaffolding
 
 ## Todo
 - Tests
@@ -78,4 +79,9 @@ npm run start:prod
 generate page
 ```javascript
 npm run gen page
+```
+
+generate component
+```javascript
+npm run gen component
 ```

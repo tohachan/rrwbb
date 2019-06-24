@@ -7,7 +7,7 @@ const defaultState = {
 };
 
 const initialState = (typeof window !== 'undefined')
-    ? window.__INITIAL__DATA__.{{lower name}} || defaultState
+    ? window.__INITIAL__DATA__.{{lowerCase name}} || defaultState
     : defaultState;
 
 export default(state = initialState, action) => {

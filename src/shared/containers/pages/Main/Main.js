@@ -14,6 +14,7 @@ import {
     FaGlobe,
     FaHandPointRight,
     FaCode,
+    FaPencilRuler,
 } from "react-icons/fa";
 
 import { LazyImage } from "react-lazy-images";
@@ -81,7 +82,7 @@ function Main () {
                                     <FaReact /> <strong>Redux with persist support</strong>
                                 </p>
                                 <p className="p-l-lg">
-                                    Persist fore some crutial states
+                                    Persist for some crutial states
                                 </p>
                             </li>
                             <li>
@@ -166,6 +167,14 @@ function Main () {
                                 <p className="p-l-lg">
                                     <span>Even this bundle uses Bulma with several components imported, main .css file size is around ~20Kb without gzip (around ~170Kb without purge css).</span><br />
                                     <span className="has-background-warning"><FaExclamationTriangle />Purge css is disabled in dev mode</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <FaPencilRuler /> <strong>Basic scaffolding</strong>
+                                </p>
+                                <p className="p-l-lg">
+                                    <span>With amazing plop generator you can add pages and components quickly</span>
                                 </p>
                             </li>
                         </ul>
@@ -281,6 +290,9 @@ function Main () {
 
                     <p>Generate page: </p>
                     <pre className="m-b-md">npm run gen page</pre>
+
+                    <p>Generate component: </p>
+                    <pre className="m-b-md">npm run gen component</pre>
                 </div>
             </section>
         </React.Fragment>

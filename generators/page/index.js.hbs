@@ -1,3 +1,7 @@
+/**
+ * Page {{name}}
+ */
+
 import React from "react";
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
@@ -13,7 +17,7 @@ import {{name}}Reducer from './reducer';
 {{#if withSaga}}
 import { WithSaga } from 'shared/components/WithSaga';
 
-import {{lower name}}Saga from './saga';
+import {{lowerCase name}}Saga from './saga';
 {{/if}}
 
 {{#if withStyles}}
@@ -49,7 +53,7 @@ function {{name}}() {
 {{#if withRedux}}
 const mapStateToProps = state => {
     return {
-        {{lower name}}: state.{{lower name}},
+        {{lowerCase name}}: state.{{lowerCase name}},
     };
 };
 
@@ -65,14 +69,14 @@ const withConnect = connect(
 );
 
 {{name}}.propTypes = {
-    {{lower name}}: PropTypes.object,
+    {{lowerCase name}}: PropTypes.object,
     dispatch: PropTypes.func,
 }
 
 export default compose(
-    WithReducer('{{lower name}}', {{name}}Reducer),
+    WithReducer('{{lowerCase name}}', {{name}}Reducer),
     {{#if withSaga}}
-    WithSaga('{{lower name}}', {{lower name}}Saga),
+    WithSaga('{{lowerCase name}}', {{lowerCase name}}Saga),
     {{/if}}
     withConnect,
 )({{name}});
