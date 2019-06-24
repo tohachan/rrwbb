@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require("path");
+const path = require('path');
 const WebpackBar = require('webpackbar');
 // const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -7,8 +7,8 @@ const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
     output: {
-        path: path.join(__dirname, "../../build/public"),
-        publicPath: "/public"
+        path: path.join(__dirname, '../../build/public'),
+        publicPath: '/public'
     },
 
     resolve: {
@@ -24,16 +24,16 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader'
                 }
             },
             {
                 test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
                 use: [
                     {
-                        loader: "file-loader",
+                        loader: 'file-loader',
                         options: {
-                            name: "[path][name]-[hash:8].[ext]"
+                            name: '[path][name]-[hash:8].[ext]'
                         }
                     }
                 ]

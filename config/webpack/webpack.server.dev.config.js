@@ -29,7 +29,7 @@ const config = {
 
     output: {
         filename: 'bundle.js',
-        path: path.join(__dirname, "../../build"),
+        path: path.join(__dirname, '../../build'),
         libraryTarget: 'commonjs2'
     },
 

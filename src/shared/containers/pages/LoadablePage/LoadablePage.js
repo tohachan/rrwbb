@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 import NoSsrChunk from 'shared/containers/pages/LoadablePage/NoSsrChunkLoader';
 
-import "./loadable_page.scss";
+import './loadable_page.scss';
 
 function LoadablePage () {
     return (

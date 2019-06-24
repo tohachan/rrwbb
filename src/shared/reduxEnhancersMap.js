@@ -2,4 +2,4 @@ import { asyncReduxEnhancers as fullpage } from 'shared/containers/pages/FullPag
 
 export default {
     '/fullpage': fullpage
-}
+};

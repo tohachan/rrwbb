@@ -34,7 +34,7 @@ const config = {
     },
 
     output: {
-        filename: "js/[name].bundle.js",
+        filename: 'js/[name].bundle.js',
         chunkFilename: 'js/[name].[contenthash].js'
     },
 
@@ -49,9 +49,9 @@ const config = {
                             hot: true,
                         }
                     },
-                    "css-loader",
-                    "postcss-loader",
-                    "sass-loader"
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
                 ]
             }
         ]
@@ -62,7 +62,7 @@ const config = {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.NamedModulesPlugin(),
         new LoadablePlugin(),
-        new ExtractCssChunks({filename: "[name].css", chunkFilename: "[id].css"})
+        new ExtractCssChunks({filename: '[name].css', chunkFilename: '[id].css'})
     ],
 
     optimization: {

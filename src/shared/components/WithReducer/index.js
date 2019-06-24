@@ -3,7 +3,8 @@
  *
  * */
 import React from 'react';
-import { ReactReduxContext } from "react-redux";
+import { ReactReduxContext } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class ReducerLoader extends React.Component {
     constructor(props) {
@@ -18,6 +19,17 @@ class ReducerLoader extends React.Component {
         return this.props.children;
     }
 }
+
+ReducerLoader.propTypes = {
+    store: PropTypes.object,
+    keyName: PropTypes.string,
+    reducer: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.object
+    ]),
+    'store.injectReducer': PropTypes.func,
+    children: PropTypes.node.isRequired,
+};
 
 export const WithReducer = (key, reducer) => WrappedComponent => {
     return (props) => {

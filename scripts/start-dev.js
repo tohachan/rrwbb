@@ -22,10 +22,10 @@ const serverCompiler = multiCompiler.compilers.find((compiler) => compiler.name 
 
 let isStarted = false;
 
-app.use('/images', express.static(path.resolve(process.cwd(), "assets/image")));
-app.use('/manifest', express.static(path.resolve(process.cwd(), "assets/manifest")));
-app.use('/intl', express.static(path.resolve(process.cwd(), "assets/intl")));
-app.use('/manifest.json', express.static(path.resolve(process.cwd(), "assets/manifest/manifest.json")));
+app.use('/images', express.static(path.resolve(process.cwd(), 'assets/image')));
+app.use('/manifest', express.static(path.resolve(process.cwd(), 'assets/manifest')));
+app.use('/intl', express.static(path.resolve(process.cwd(), 'assets/intl')));
+app.use('/manifest.json', express.static(path.resolve(process.cwd(), 'assets/manifest/manifest.json')));
 
 app.use(cookieParser());
 
@@ -37,7 +37,7 @@ app.use(
 );
 
 app.use(webpackHotMiddleware(clientCompiler, {
-    path: "/__webpack_hmr"
+    path: '/__webpack_hmr'
 }));
 app.use(webpackHotServerMiddleware(multiCompiler, {
     serverRendererOptions: { outputPath: clientConfig.output.path },

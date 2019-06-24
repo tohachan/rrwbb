@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 
 import LoadablePage from 'shared/containers/pages/LoadablePage/loadable';
 import FullPage from 'shared/containers/pages/FullPage/loadable';
@@ -29,15 +29,15 @@ function Nav (props) {
                         rel="noreferrer"
                         href="https://rrwbb.com"
                         className="navbar-item"
-                        >
+                    >
                         <img src="/images/rwb_colorless.svg" alt="RWB logo" />
                     </a>
 
                     <span
                         onClick={() => setOpen(!open)}
-                        className={"navbar-burger burger" + (open ? ' is-active' : '')}
+                        className={'navbar-burger burger' + (open ? ' is-active' : '')}
                         data-target="navbarMenuHeroA"
-                        >
+                    >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -46,8 +46,8 @@ function Nav (props) {
                 <div
                     id="navbarMenuHeroA"
                     onClick={() => setOpen(false)}
-                    className={"navbar-menu" + (open ? ' is-active' : '')}
-                    >
+                    className={'navbar-menu' + (open ? ' is-active' : '')}
+                >
                     <div className="navbar-end">
                         <Link className="navbar-item" to="/">Home</Link>
                         <Link className="navbar-item" to="/static-page">Static</Link>
@@ -57,14 +57,14 @@ function Nav (props) {
                             onMouseOver={() => {
                                 LoadablePage.preload();
                             }}
-                            >Loadable</Link>
+                        >Loadable</Link>
                         <Link
                             className="navbar-item"
                             to="/fullpage"
                             onMouseOver={() => {
                                 FullPage.preload();
                             }}
-                            >Full Page</Link>
+                        >Full Page</Link>
 
                         <span className="navbar-item">
                             <a
@@ -72,7 +72,7 @@ function Nav (props) {
                                 rel="noreferrer"
                                 href="https://github.com/tohachan/rrwbb"
                                 className="button is-light is-inverted"
-                                >
+                            >
                                 <FaGithub />
 
                                 <span>Github</span>
@@ -80,13 +80,13 @@ function Nav (props) {
                         </span>
 
                         <a
-                            className={"navbar-item" + (locale === 'en-US' ? ' is-active' : '')}
+                            className={'navbar-item' + (locale === 'en-US' ? ' is-active' : '')}
                             onClick={() => handleChangeLocale('en-US')}
-                            >EN</a>
+                        >EN</a>
                         <a
-                            className={"navbar-item" + (locale === 'ru-RU' ? ' is-active' : '')}
+                            className={'navbar-item' + (locale === 'ru-RU' ? ' is-active' : '')}
                             onClick={() => handleChangeLocale('ru-RU')}
-                            >RU</a>
+                        >RU</a>
                     </div>
                 </div>
             </div>
@@ -99,6 +99,6 @@ Nav.propTypes = {
     changeLocale: PropTypes.func,
     setLocale: PropTypes.func,
     i18n: PropTypes.object
-}
+};
 
 export default Nav;

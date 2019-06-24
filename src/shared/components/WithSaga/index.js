@@ -3,7 +3,8 @@
  *
  * */
 import React, { useEffect } from 'react';
-import { ReactReduxContext } from "react-redux";
+import { ReactReduxContext } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class SagaLoader extends React.Component {
     constructor(props) {
@@ -40,6 +41,19 @@ class SagaLoader extends React.Component {
 //
 //     return props.children;
 // }
+
+SagaLoader.propTypes = {
+    store: PropTypes.object,
+    keyName: PropTypes.string,
+    saga: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.object
+    ]),
+    args: PropTypes.array,
+    'store.injectSaga': PropTypes.func,
+    'store.ejectSaga': PropTypes.func,
+    children: PropTypes.node.isRequired,
+};
 
 export const WithSaga = (key, saga, args) => WrappedComponent => {
     return (props) => {

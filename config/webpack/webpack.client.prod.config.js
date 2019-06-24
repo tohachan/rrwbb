@@ -23,10 +23,10 @@ const config = {
     target: 'web',
 
     output: {
-        path: path.join(appDirectory, "build", "public"),
-        filename: "[name].bundle.js",
+        path: path.join(appDirectory, 'build', 'public'),
+        filename: '[name].bundle.js',
         chunkFilename: '[contenthash].js',
-        publicPath: "./build/public/"
+        publicPath: './build/public/'
     },
 
     devtool: 'hidden-source-map',
@@ -42,9 +42,9 @@ const config = {
                             minimize: true
                         }
                     },
-                    "css-loader",
-                    "postcss-loader",
-                    "sass-loader"
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
                 ]
             }
         ]
@@ -52,7 +52,7 @@ const config = {
 
     plugins: [
         new LoadablePlugin(),
-        new ExtractCssChunks({filename: "[name].css", chunkFilename: "[id].css"}),
+        new ExtractCssChunks({filename: '[name].css', chunkFilename: '[id].css'}),
         new PurgecssPlugin({
             paths: glob.sync(path.join(appDirectory, 'src') + '/**/*',  { nodir: true }),
         }),

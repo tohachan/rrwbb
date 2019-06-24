@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import 'whatwg-fetch';
 
-import App from "shared/containers/App";
+import App from 'shared/containers/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { loadableReady } from '@loadable/component';
 
@@ -23,7 +23,7 @@ import ConnectedIntlProvider from 'shared/containers/ConnectedIntlProvider';
 
 import * as envConfig from '../../config/env';
 
-import "./app.scss";
+import './app.scss';
 
 const state = window.__INITIAL__DATA__;
 
@@ -38,9 +38,9 @@ loadableReady(() => {
         <Provider store={store}>
             <ConnectedIntlProvider>
                 <ConnectedRouter history={history}>
-                    <App name={"Vasya Pupkin"} />
+                    <App name={'Vasya Pupkin'} />
                 </ConnectedRouter>
             </ConnectedIntlProvider>
-        </Provider>, document.getElementById("app")
+        </Provider>, document.getElementById('app')
     );
 });

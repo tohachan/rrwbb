@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 // const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -8,16 +8,16 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader'
                 }
             },
             {
                 test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
                 use: [
                     {
-                        loader: "file-loader",
+                        loader: 'file-loader',
                         options: {
-                            name: "[path][name]-[hash:8].[ext]"
+                            name: '[path][name]-[hash:8].[ext]'
                         }
                     }
                 ]

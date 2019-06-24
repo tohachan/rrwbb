@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import "./main_page.scss";
+import './main_page.scss';
 
 import {
     FaReact,
@@ -15,9 +15,9 @@ import {
     FaHandPointRight,
     FaCode,
     FaPencilRuler,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
-import { LazyImage } from "react-lazy-images";
+import { LazyImage } from 'react-lazy-images';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -34,7 +34,7 @@ function Main () {
                             <FormattedMessage
                                 id="main.title"
                                 defaultMessage="Default message"
-                                />
+                            />
                         </h1>
                         <h2 className="title subtitle is-3">
                             For another project
@@ -301,6 +301,6 @@ function Main () {
 
 Main.propTypes = {
 
-}
+};
 
 export default Main;

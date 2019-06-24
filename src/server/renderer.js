@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -103,12 +103,12 @@ export default ({ clientStats, hot }) => (req, res, next) => {
 
         stylePromise.then((cssString) => {
             const styleTag = hot
-            ? chunkExtractor.getStyleTags()
-            : ReactDOMServer.renderToString(
-                <style dangerouslySetInnerHTML={{
-                    __html: cssString
-                }}/>
-            );
+                ? chunkExtractor.getStyleTags()
+                : ReactDOMServer.renderToString(
+                    <style dangerouslySetInnerHTML={{
+                        __html: cssString
+                    }}/>
+                );
 
             const initialState = store.getState();
             const helmet = Helmet.renderStatic();

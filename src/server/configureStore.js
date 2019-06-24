@@ -26,4 +26,4 @@ export default function configureStore() {
     store.ejectSaga = (key) => {};
 
     return store;
-};
+}

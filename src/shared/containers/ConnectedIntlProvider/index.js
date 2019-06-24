@@ -16,7 +16,7 @@ function ConnectedIntlProvider(props) {
         <IntlProvider
             locale={props.global.locale}
             messages={props.i18n[props.global.locale]}
-            >
+        >
             {props.children}
         </IntlProvider>
     );
@@ -32,6 +32,7 @@ const mapStateToProps = state => {
 ConnectedIntlProvider.propTypes = {
     global: PropTypes.object,
     i18n: PropTypes.object,
-}
+    children: PropTypes.node.isRequired,
+};
 
 export default connect(mapStateToProps)(ConnectedIntlProvider);

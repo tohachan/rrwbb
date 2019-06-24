@@ -23,4 +23,4 @@ export default function createReducer(isServer, asyncReducers = {}) {
             ...asyncReducers
         });
     }
-};
+}

@@ -85,4 +85,4 @@ export default function configureStore(preloadedState = {}) {
     sagaMiddleware.run(globalSaga);
 
     return { store, persistor };
-};
+}

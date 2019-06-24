@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -33,7 +33,7 @@ function FullPage (props) {
         <article
             key={i}
             className="message"
-            >
+        >
             <div className="message-header">
                 <p>{item.id} {item.title}</p>
                 <button className="delete" aria-label="delete"></button>
@@ -48,7 +48,7 @@ function FullPage (props) {
         <article
             key={i}
             className=""
-            >
+        >
             <p>{item.id} {item.name}, {item.email}</p>
         </article>
     ));
@@ -76,11 +76,11 @@ function FullPage (props) {
                         <div>
                             <button
                                 onClick={() => props.dispatch(getComments())}
-                                className={"button is-info" + (commentsLoading ? ' is-loading' : '')}
-                                >Get them!</button>
+                                className={'button is-info' + (commentsLoading ? ' is-loading' : '')}
+                            >Get them!</button>
                         </div>
 
-                        <div className={comments.length ? "m-t-lg" : ""}>
+                        <div className={comments.length ? 'm-t-lg' : ''}>
                             {commentsLoading ? (<TextPlaceholder />) : commentsHtml}
                         </div>
                     </div>
@@ -137,7 +137,7 @@ function mapDispatchToProps(dispatch) {
     return {
         dispatch,
     };
-};
+}
 
 const withConnect = connect(
     mapStateToProps,
@@ -147,7 +147,7 @@ const withConnect = connect(
 FullPage.propTypes = {
     fullpage: PropTypes.object,
     dispatch: PropTypes.func,
-}
+};
 
 export default compose(
     WithReducer('fullpage', FullPageReducer),
