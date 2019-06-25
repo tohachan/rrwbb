@@ -1,7 +1,7 @@
 {
     "name": "rrwbb",
     "version": "0.5.2",
-    "author": "tohachan <toha.chan@cmail.com>",
+    "author": "tohachan <toha.chan@gmail.com>",
     "description": "React Webpack Babel setup with SSR, HMR and Code splitting",
     "keywords": [
         "React",
@@ -22,21 +22,19 @@
         "start:prod": "node build/bundle.js",
         "gen": "plop --plopfile generators/index.js",
         "analyze": "npm run build && source-map-explorer build/public/main.bundle.*",
-        "lint": "npm run lint:eslint -- .",
-        "lint:eslint": "eslint",
-        "lint:fix": "npm run lint:eslintfix -- .",
-        "lint:eslintfix": "eslint --fix"
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint",
+            "git add"
+        ]
     },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
         }
-    },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix",
-            "git add"
-        ]
     },
     "devDependencies": {
         "@babel/core": "7.2.2",
