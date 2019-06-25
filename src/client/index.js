@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 import 'whatwg-fetch';
 
+// Polyfill for safari
+import 'intersection-observer';
+
 import App from 'shared/containers/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { loadableReady } from '@loadable/component';
