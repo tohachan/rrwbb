@@ -23,9 +23,9 @@
         "gen": "plop --plopfile generators/index.js",
         "analyze": "npm run build && source-map-explorer build/public/main.bundle.*",
         "lint": "npm run lint:eslint -- .",
-        "lint:eslint": "eslint --ignore-path .gitignore",
+        "lint:eslint": "eslint",
         "lint:fix": "npm run lint:eslintfix -- .",
-        "lint:eslintfix": "eslint --fix --ignore-path .gitignore"
+        "lint:eslintfix": "eslint --fix"
     },
     "husky": {
         "hooks": {
@@ -34,7 +34,7 @@
     },
     "lint-staged": {
         "*.js": [
-            "eslint --fix --ignore-path .gitignore",
+            "eslint --fix",
             "git add"
         ]
     },
