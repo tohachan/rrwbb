@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 import Main from 'shared/containers/pages/Main/loadable';
 import Static from 'shared/containers/pages/Static/Static';
 import LoadablePage from 'shared/containers/pages/LoadablePage/loadable';
-
 import FullPage from 'shared/containers/pages/FullPage/loadable';
+/* route generator import anchor */
 
 const NotFound = () => (
     <div>
@@ -31,6 +31,8 @@ const Routes = [
         path: '/fullpage',
         component: FullPage,
     },
+    /* route generator anchor */
+    // don't remove ^ generator anchor above in order route generator to work
     {
         component: NotFound
     }

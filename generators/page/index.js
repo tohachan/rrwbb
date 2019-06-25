@@ -3,6 +3,7 @@
  */
 
 const PAGES_BASE_PATH = '../src/shared/containers/pages/';
+const ECHO_BASE_PATH = 'shared/containers/pages/';
 
 module.exports = {
     description: 'Create new page',
@@ -16,6 +17,17 @@ module.exports = {
                 return value
                     ? true
                     : 'Name is required';
+            },
+        },
+        {
+            type: 'input',
+            name: 'route',
+            message: 'Type the route',
+            default: '/newpage',
+            validate: value => {
+                return value
+                    ? true
+                    : 'route is required';
             },
         },
         {
@@ -93,6 +105,11 @@ module.exports = {
                 abortOnFail: true,
             });
         }
+
+        actions.push({
+            type: 'addRoute',
+            path: ECHO_BASE_PATH
+        });
 
         return actions;
     },
