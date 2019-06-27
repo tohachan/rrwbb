@@ -12,7 +12,7 @@ This is a starter pack for build front end application of any (probably) complex
 Because it can save a lot of time when you need to start your next project.
 
 ### Motivation
-My goal was to create setup for future projects without too much of "black box" solutions and with support of all requred features for production.
+My goal was to create setup for future projects without too much of "black box" solutions and with support of all required features for production.
 I mostly borrow all the ideas from all around the Internet and put them all together.
 
 ### Requirements
@@ -40,7 +40,6 @@ Required node >=9.0 && <12.4 since right now node-sass have some problem to inst
 ## Todo
 - Tests
 - Storybook
-- Separate SPA build html file
 - Close to real world i18n usage
 - More sample pages
 - Better requests handler
@@ -100,4 +99,37 @@ npm run build:spa
 SPA local server start
 ```javascript
 npm run start:spa
+```
+
+### Dir tree
+```sh
+.
+├── assets                              # Assets folder
+│   ├── image                           # Images
+│   │   └── favicons                    # Favicons
+│   ├── intl                            # Translations in .json
+│   └── manifest                        # Manifest
+├── config                              # Configs
+│   ├── env                             # Environment specific configs
+│   └── webpack                         # Webpack configs
+├── generators                          # Generators for scaffolding
+│   ├── component                       # Component generator
+│   └── page                            # Page generator
+├── scripts                             # Starters
+└── src                                 # Source files
+    ├── client                          # Client only code
+    ├── server                          # Server only code
+    └── shared                          # Isomorphic code
+        ├── components                  # Components
+        │   ├── Nav                     # Site navigation
+        │   ├── WithReducer             # HOC for reducer injection
+        │   └── WithSaga                # HOC for Saga injection
+        └── containers                  # Containers
+            ├── App                     # Main app container
+            ├── ConnectedIntlProvider   # IntlProvider wrapper with redux
+            └── pages                   # Pages
+                ├── FullPage            # Example page with multiple features
+                ├── LoadablePage        # Example page with loadable
+                ├── Main                # Example main page
+                └── Static              # Example static page
 ```
