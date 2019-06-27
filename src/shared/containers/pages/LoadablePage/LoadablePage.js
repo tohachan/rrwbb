@@ -1,7 +1,9 @@
+/**
+ * Example of loadable page
+ */
+
 import React from 'react';
-
 import NoSsrChunk from 'shared/containers/pages/LoadablePage/NoSsrChunkLoader';
-
 import './loadable_page.scss';
 
 function LoadablePage () {

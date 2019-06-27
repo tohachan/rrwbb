@@ -1,8 +1,7 @@
 /**
-*
-* Starts local server for SPA build
-*
-**/
+ * Starts local server for SPA build
+ */
+
 const fs = require('fs');
 const express = require('express');
 const path = require('path');

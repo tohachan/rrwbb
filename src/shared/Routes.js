@@ -1,11 +1,18 @@
+/**
+ * Router file
+ * Map routes to components
+ * Note that we mostly map routes to loadable components
+ */
+
 import React from 'react';
-import loadable from '@loadable/component';
 
 import Main from 'shared/containers/pages/Main/loadable';
+// Note that only Static component imported directly without loadable
 import Static from 'shared/containers/pages/Static/Static';
 import LoadablePage from 'shared/containers/pages/LoadablePage/loadable';
 import FullPage from 'shared/containers/pages/FullPage/loadable';
 /* route generator import anchor */
+// don't remove ^ generator anchor above in order route generator to work
 
 const NotFound = () => (
     <div>

@@ -1,3 +1,7 @@
+/**
+ * Client store creation file
+ */
+
 import { compose, createStore, applyMiddleware } from 'redux';
 import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'connected-react-router';
@@ -23,6 +27,11 @@ const persistConfig = {
     whitelist: ['global']
 };
 
+/**
+ * Configure the store
+ * @param  {Object} [preloadedState={}]   preloaded state from server
+ * @return {Object} { store, persistor }
+ */
 export default function configureStore(preloadedState = {}) {
     // console.log('preloadedState: ', preloadedState);
 
@@ -61,7 +70,6 @@ export default function configureStore(preloadedState = {}) {
     store.injectSaga = (key, saga, args) => {
         if (!store.injectedSagas[key] || store.injectedSagas[key] === 'done') {
             store.injectedSagas[key] = {
-                //...newDescriptor,
                 task: store.runSaga(saga, args),
             };
         }

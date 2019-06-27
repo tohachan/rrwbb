@@ -1,9 +1,19 @@
+/**
+ * Server renderer
+ * used in both dev and prod builds
+ */
+
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 
 // Redux
 import { Provider } from 'react-redux';
+/**
+ * Here we import reduxEnhancersAll from reduxEnhancersMap to tell server if
+ * there is anything we should do before render the page
+ * we don't pass this via Router to avoid client main bunle oversize
+ */
 import reduxEnhancersAll from 'shared/reduxEnhancersMap';
 
 // Routes
@@ -39,6 +49,12 @@ const translations = glob.sync('assets/intl/*.json')
         return collection;
     }, {});
 
+/**
+ * Rendeder function wrapper
+ * @param  {Object} clientStats    Client stats. Comes in differrent formats depending on build type
+ * @param  {Boolean} hot           See if it's run by hot server middlewares (i.e. Dev mode)
+ * @return {Function}              Rendeder function
+ */
 export default ({ clientStats, hot }) => (req, res, next) => {
     const store = configureStore();
     let modules = [];
@@ -67,6 +83,7 @@ export default ({ clientStats, hot }) => (req, res, next) => {
         store.injectReducer(...asyncReducer);
     }
 
+    // if there is any async data loaders passed we have to wait for them to finish first
     if (dataLoaders) {
         promise = store.runSaga(waitAll(dataLoaders)).toPromise();
     } else {

@@ -1,3 +1,7 @@
+/**
+ * Entry for prod server
+ */
+
 const fs = require('fs');
 import express from 'express';
 import path from 'path';

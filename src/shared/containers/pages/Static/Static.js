@@ -1,3 +1,8 @@
+/**
+ * Example of static page
+ * this page will be imported directly by Router and included in the main bundle
+ */
+
 import React from 'react';
 
 function Static () {

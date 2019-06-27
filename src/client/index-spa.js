@@ -1,3 +1,9 @@
+/**
+ * Entry for SPA client
+ *
+ * doesn't use hydrate and loadableReady since we are not suppose to have any server here
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

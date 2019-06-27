@@ -1,3 +1,7 @@
+/**
+ * Main global App container
+ */
+
 import { hot } from 'react-hot-loader/root';
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -21,6 +25,10 @@ import Nav from 'shared/components/Nav';
 import { changeLocale, setLocale } from 'shared/containers/ConnectedIntlProvider/actions';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
+/**
+ * App component
+ * @param {Object} props
+ */
 const App = (props) => {
     useEffect(() => {
         // console.log('App rerender');

@@ -1,9 +1,14 @@
+/**
+ * Main Nav component
+ */
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { FaGithub } from 'react-icons/fa';
 
+// Note that we have to import loadable components here if we want to use preload() feature
 import LoadablePage from 'shared/containers/pages/LoadablePage/loadable';
 import FullPage from 'shared/containers/pages/FullPage/loadable';
 

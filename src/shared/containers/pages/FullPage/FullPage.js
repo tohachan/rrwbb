@@ -1,3 +1,7 @@
+/**
+ * Example page with async reducer, async saga and data-preloading on server side
+ */
+
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
@@ -14,6 +18,8 @@ import { WithSaga } from 'shared/components/WithSaga';
 
 import FullPageReducer from './reducer';
 
+// We import saga methods doGetPos, doGetPost directly without watchers
+// if we want to pass them to server for data-preloading
 import { doGetPost } from 'shared/containers/App/saga';
 import fullpageSaga, { doGetComments, doGetPosts } from './saga';
 
@@ -118,11 +124,17 @@ function FullPage (props) {
     );
 }
 
-// SSR data loaders and reducer export
+/**
+ * SSR data loaders and reducer export
+ * dataLoaders [[saga, action], ...]
+ * asyncReducer [name, Reducer]
+ *
+ * this will be mapped in reduxEnchancersMap.js
+ */
 export const asyncReduxEnhancers = {
     dataLoaders: [
-        [doGetPost, getPost()],
-        [doGetPosts, {}],
+        [doGetPost, getPost()], // we can pass action for saga function
+        [doGetPosts, {}], // or just {} if we don't need any action params
     ],
     asyncReducer: ['fullpage', FullPageReducer]
 };

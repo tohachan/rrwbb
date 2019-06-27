@@ -1,3 +1,7 @@
+/**
+ * A simple placeholder to indicate text loading
+ */
+
 import React from 'react';
 
 function TextPlaceholder () {

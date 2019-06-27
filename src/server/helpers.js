@@ -1,3 +1,7 @@
+/**
+ * Server helpers file
+ */
+
 import { all, call } from 'redux-saga/effects';
 
 export const waitAll = (sagas) => function* () {

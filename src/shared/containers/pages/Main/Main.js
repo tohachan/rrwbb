@@ -1,7 +1,11 @@
+/**
+ * Example of main page
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import './main_page.scss';
-
+import { LazyImage } from 'react-lazy-images';
+import { FormattedMessage } from 'react-intl';
 import {
     FaReact,
     FaNodeJs,
@@ -18,9 +22,7 @@ import {
     FaPencilRuler,
 } from 'react-icons/fa';
 
-import { LazyImage } from 'react-lazy-images';
-
-import { FormattedMessage } from 'react-intl';
+import './main_page.scss';
 
 function Main () {
     return (

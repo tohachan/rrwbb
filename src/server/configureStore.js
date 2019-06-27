@@ -1,3 +1,7 @@
+/**
+ * Server store creation file
+ */
+
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import createReducer from 'shared/createReducer';

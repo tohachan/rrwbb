@@ -1,8 +1,7 @@
 /**
-*
-* Starts local dev server with HMR
-*
-**/
+ * Starts local dev server with HMR
+ */
+
 const express = require('express');
 const path = require('path');
 
@@ -34,13 +33,13 @@ app.use('/manifest.json', express.static(path.resolve(process.cwd(), 'assets/man
 
 app.use(cookieParser());
 
+// note that we pass multiCompiler to webpackDevMiddleware
 app.use(
     webpackDevMiddleware(multiCompiler, {
         logLevel: 'trace',
         publicPath: clientConfig.output.publicPath,
     })
 );
-
 app.use(webpackHotMiddleware(clientCompiler, {
     path: '/__webpack_hmr'
 }));
