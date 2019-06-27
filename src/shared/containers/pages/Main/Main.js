@@ -271,6 +271,11 @@ function Main () {
                                     <FaHandPointRight /> <strong>Better requests handler</strong>
                                 </p>
                             </li>
+                            <li>
+                                <p>
+                                    <FaHandPointRight /> <strong>PWA</strong>
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>

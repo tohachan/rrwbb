@@ -43,6 +43,7 @@ Required node >=9.0 && <12.4 since right now node-sass have some problem to inst
 - Close to real world i18n usage
 - More sample pages
 - Better requests handler
+- PWA
 
 
 ### Usage:
@@ -101,6 +102,7 @@ SPA local server start
 npm run start:spa
 ```
 
+---
 ### Dir tree
 ```sh
 .
