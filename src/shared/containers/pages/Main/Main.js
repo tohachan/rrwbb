@@ -62,8 +62,9 @@ function Main () {
                 <div className="container">
                     <h2 className="title is-2">Motivation</h2>
 
-                    <p>My goal was to create setup for future projects without too much of "black box" solutions and with support of all required features for production.</p>
-                    <p>I mostly borrow all the ideas from all around the Internet and put them all together.</p>
+                    <p>My goal was to create setup for future projects without too much of "black box" solutions and with support of all required features for differrent needs. So there is no SSG, just webpack and babel.
+                    I also wanted to have clear, explicit and decoupled configs. It should also be optimized and use modern best practices. I couldn't find setup that could do all of that the way i want it, so i made this one.</p>
+                    <p>I mostly borrow all the ideas from all around the Internet (especially from <a target="_blank" rel="noreferrer" href="https://github.com/react-boilerplate/react-boilerplate">react-boilerplate</a>) and put them all together.</p>
                 </div>
             </section>
             <section className="section">
@@ -302,11 +303,21 @@ function Main () {
                     <p>Separate start command (should make build first): </p>
                     <pre>npm run start:prod</pre>
 
+                    <hr/>
+
                     <p>Generate page: </p>
                     <pre>npm run gen page</pre>
 
                     <p>Generate component: </p>
                     <pre>npm run gen component</pre>
+
+                    <hr/>
+
+                    <p>Check code style: </p>
+                    <pre>npm run lint</pre>
+
+                    <p>Fix code style: </p>
+                    <pre>npm run lint:fix</pre>
 
                     <hr/>
 

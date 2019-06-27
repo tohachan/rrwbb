@@ -6,14 +6,17 @@
 &nbsp;
 
 ### What is this?
-This is a starter pack for build front end application of any (probably) complexity.
+This is a starter pack for build front end React application of any (probably) complexity.
 
 ### Why you might need this?
 Because it can save a lot of time when you need to start your next project.
 
 ### Motivation
-My goal was to create setup for future projects without too much of "black box" solutions and with support of all required features for production.
-I mostly borrow all the ideas from all around the Internet and put them all together.
+My goal was to create setup for future projects without too much of "black box" solutions and with support of all required features for differrent needs. So there is no SSG, just webpack and babel.
+I also wanted to have clear, explicit and decoupled configs. It should also be optimized and use modern best practices.
+I couldn't find setup that could do all of that the way i want it, so i made this one.
+I mostly borrow all the ideas from all around the Internet (especially from [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)) and put them all together.
+
 
 ### Requirements
 Required node >=9.0 && <12.4 since right now node-sass have some problem to install with 12.4
@@ -80,6 +83,8 @@ separate start command (should make build first)
 npm run start:prod
 ```
 
+---
+### Generators
 generate page
 ```javascript
 npm run gen page
@@ -101,8 +106,20 @@ SPA local server start
 ```javascript
 npm run start:spa
 ```
-
 ---
+
+### Lint
+Sheck code style
+```javascript
+npm run lint
+```
+
+Fix code style
+```javascript
+npm run lint:fix
+```
+---
+
 ### Dir tree
 ```sh
 .
