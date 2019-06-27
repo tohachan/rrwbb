@@ -8,7 +8,6 @@ import 'intersection-observer';
 
 import App from 'shared/containers/App';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { loadableReady } from '@loadable/component';
 
 // redux
 import { compose, createStore, applyMiddleware } from 'redux';
@@ -36,14 +35,12 @@ if (envConfig.useOfflinePlugin) {
     require('offline-plugin/runtime').install();
 }
 
-loadableReady(() => {
-    ReactDOM.hydrate(
-        <Provider store={store}>
-            <ConnectedIntlProvider>
-                <ConnectedRouter history={history}>
-                    <App />
-                </ConnectedRouter>
-            </ConnectedIntlProvider>
-        </Provider>, document.getElementById('app')
-    );
-});
+ReactDOM.render(
+    <Provider store={store}>
+        <ConnectedIntlProvider>
+            <ConnectedRouter history={history}>
+                <App />
+            </ConnectedRouter>
+        </ConnectedIntlProvider>
+    </Provider>, document.getElementById('app')
+);

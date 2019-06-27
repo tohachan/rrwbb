@@ -9,6 +9,7 @@ import {
     FaTh,
     FaProjectDiagram,
     FaAngleLeft,
+    FaAngleRight,
     FaGoogle,
     FaExclamationTriangle,
     FaGlobe,
@@ -177,6 +178,17 @@ function Main () {
                                     <span>With amazing plop generator you can add pages and components quickly</span>
                                 </p>
                             </li>
+                            <li>
+                                <p>
+                                    <FaAngleRight /> <strong>SPA build</strong>
+                                </p>
+                                <p className="p-l-lg">
+                                    Separate SPA build for static hosting
+                                </p>
+                                <p className="p-l-lg">
+                                    See <a target="_blank" rel="noreferrer" href="https://spa.rrwbb.com/">example</a> (hosted for free by <a target="_blank" rel="noreferrer" href="https://www.netlify.com/pricing/">Netlify</a>)
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -244,11 +256,6 @@ function Main () {
                             </li>
                             <li>
                                 <p>
-                                    <FaHandPointRight /> <strong>Separate SPA build html file for JAMStack deployment</strong>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
                                     <FaHandPointRight /> <strong>Close to real world i18n usage</strong>
                                 </p>
                             </li>
@@ -267,32 +274,40 @@ function Main () {
                 </div>
             </section>
             <section className="section">
-                <div className="container">
+                <div className="container usage">
                     <h2 className="title is-2">Usage</h2>
 
                     <p>Install: </p>
-                    <pre className="m-b-md">npm i</pre>
+                    <pre>npm i</pre>
 
                     <p>Start dev server: </p>
-                    <pre className="m-b-md">npm run dev</pre>
+                    <pre>npm run dev</pre>
 
                     <p>Build and start prod server: </p>
-                    <pre className="m-b-md">npm run prod</pre>
+                    <pre>npm run prod</pre>
 
                     <p>Build and analyze bundle size: </p>
-                    <pre className="m-b-md">npm run analyze</pre>
+                    <pre>npm run analyze</pre>
 
                     <p>Build without start: </p>
-                    <pre className="m-b-md">npm run build</pre>
+                    <pre>npm run build</pre>
 
-                    <p>Separate start command (should build first): </p>
-                    <pre className="m-b-md">npm run start:prod</pre>
+                    <p>Separate start command (should make build first): </p>
+                    <pre>npm run start:prod</pre>
 
                     <p>Generate page: </p>
-                    <pre className="m-b-md">npm run gen page</pre>
+                    <pre>npm run gen page</pre>
 
                     <p>Generate component: </p>
-                    <pre className="m-b-md">npm run gen component</pre>
+                    <pre>npm run gen component</pre>
+
+                    <hr/>
+
+                    <p>SPA build: </p>
+                    <pre>npm run build:spa</pre>
+
+                    <p>SPA local server: </p>
+                    <pre>npm run start:spa</pre>
                 </div>
             </section>
         </React.Fragment>

@@ -10,3 +10,14 @@
 .features__list > li {
     margin-bottom: 0.625rem;
 }
+
+.usage {
+    > p {
+        font-weight: bold;
+    }
+
+    > pre {
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+}

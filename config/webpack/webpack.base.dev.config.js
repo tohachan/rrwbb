@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const WebpackBar = require('webpackbar');
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const appDirectory = fs.realpathSync(process.cwd());
 
@@ -42,11 +41,6 @@ module.exports = {
     },
 
     plugins: [
-        // Use this later for JAM build
-        // new HtmlWebpackPlugin({
-        //     filename: "index.html",
-        //     template: path.join(__dirname, "src", "index.html")
-        // }),
         new WebpackBar({
             color: '#1b78bf'
         })

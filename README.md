@@ -35,6 +35,7 @@ Required node >=9.0 && <12.4 since right now node-sass have some problem to inst
 - Css load optimization
 - Bulma
 - Basic scaffolding
+- Separate SPA build for static hosting [See demo](https://spa.rrwbb.com/)
 
 ## Todo
 - Tests
@@ -74,7 +75,7 @@ build without start
 npm run build
 ```
 
-separate start command (should build first)
+separate start command (should make build first)
 ```javascript
 npm run start:prod
 ```
@@ -87,4 +88,16 @@ npm run gen page
 generate component
 ```javascript
 npm run gen component
+```
+
+---
+### SPA:
+SPA build
+```javascript
+npm run build:spa
+```
+
+SPA local server start
+```javascript
+npm run start:spa
 ```

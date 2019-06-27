@@ -1,3 +1,8 @@
+/**
+*
+* Starts local dev server with HMR
+*
+**/
 const express = require('express');
 const path = require('path');
 

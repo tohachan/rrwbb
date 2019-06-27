@@ -1,1 +1,1 @@
-// yarn prod
+// npm run prod
