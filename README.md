@@ -95,6 +95,11 @@ generate component
 npm run gen component
 ```
 
+extract intl lexems to JSON files
+```javascript
+npm run extract-intl
+```
+
 ---
 ### SPA:
 SPA build
@@ -109,7 +114,7 @@ npm run start:spa
 ---
 
 ### Lint
-Sheck code style
+Check code style
 ```javascript
 npm run lint
 ```

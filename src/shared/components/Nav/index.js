@@ -59,16 +59,12 @@ function Nav (props) {
                         <Link
                             className="navbar-item"
                             to="/dynamic-page"
-                            onMouseOver={() => {
-                                LoadablePage.preload();
-                            }}
+                            onMouseOver={() => LoadablePage.preload()}
                         >Loadable</Link>
                         <Link
                             className="navbar-item"
                             to="/fullpage"
-                            onMouseOver={() => {
-                                FullPage.preload();
-                            }}
+                            onMouseOver={() => FullPage.preload()}
                         >Full Page</Link>
 
                         <span className="navbar-item">

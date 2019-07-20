@@ -311,6 +311,9 @@ function Main () {
                     <p>Generate component: </p>
                     <pre>npm run gen component</pre>
 
+                    <p>Extract intl lexems to JSON files: </p>
+                    <pre>npm run extract-intl</pre>
+
                     <hr/>
 
                     <p>Check code style: </p>

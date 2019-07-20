@@ -1,4 +1,5 @@
-export const DEFAULT_LOCALE = 'en-US';
+export const DEFAULT_LOCALE = require('./defaults').DEFAULT_LOCALE;
+export const LOCALES = require('./defaults').LOCALES;
 
 export const CHANGE_LOCALE = 'intl/change_locale';
 export const CHANGE_LOCALE_SUCCESS = 'intl/change_locale_success';
