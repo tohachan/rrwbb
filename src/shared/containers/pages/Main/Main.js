@@ -6,6 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LazyImage } from 'react-lazy-images';
 import { FormattedMessage } from 'react-intl';
+import messages from './messages';
 import {
     FaReact,
     FaNodeJs,
@@ -34,10 +35,7 @@ function Main () {
                             RRWBB
                         </h1>
                         <h1 className="title is-2">
-                            <FormattedMessage
-                                id="main.title"
-                                defaultMessage="Default message"
-                            />
+                            <FormattedMessage {...messages.title} />
                         </h1>
                         <h2 className="title subtitle is-3">
                             For another project
@@ -136,8 +134,7 @@ function Main () {
                                     <FaGlobe /> <strong>i18n</strong>
                                 </p>
                                 <p className="p-l-lg">
-                                    With separate json loading for every language<br />
-                                    <span className="has-background-warning"><FaExclamationTriangle />Right now it's not really feature-loaded, but works</span>
+                                    With separate json loading for every language
                                 </p>
                             </li>
                             <li>
@@ -255,11 +252,6 @@ function Main () {
                             <li>
                                 <p>
                                     <FaHandPointRight /> <strong>Add storybook</strong>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <FaHandPointRight /> <strong>Close to real world i18n usage</strong>
                                 </p>
                             </li>
                             <li>

@@ -24,6 +24,7 @@ import Nav from 'shared/components/Nav';
 // i18n
 import { changeLocale, setLocale } from 'shared/containers/ConnectedIntlProvider/actions';
 import { injectIntl, FormattedMessage } from 'react-intl';
+import messages from './messages';
 
 /**
  * App component
@@ -51,10 +52,7 @@ const App = (props) => {
                 defaultTitle={'RRWBB SSR setup'}
             >
                 <meta charSet="utf-8" />
-                <meta name="description" content={formatMessage({
-                    id: 'meta.description',
-                    defaultMessage: 'Default meta description'
-                })} />
+                <meta name="description" content={formatMessage(messages.metaDescr)} />
                 <meta name="keywords" content="react webpack babel" />
                 <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"/>
 
@@ -66,10 +64,7 @@ const App = (props) => {
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
 
-                <title>{formatMessage({
-                    id: 'meta.title',
-                    defaultMessage: 'Default meta title'
-                })}</title>
+                <title>{formatMessage(messages.metaTitle)}</title>
             </Helmet>
 
             <div className="hero-head">

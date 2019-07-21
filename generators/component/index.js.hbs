@@ -4,7 +4,10 @@
 
 import React from "react";
 import PropTypes from 'prop-types';
-
+{{#if withIntl}}
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+{{/if}}
 {{#if withStyles}}
 import "./styles.scss";
 {{/if}}
@@ -13,7 +16,11 @@ function {{name}}() {
     return (
         <React.Fragment>
             <div class="{{name}}">
-
+                {{#if withIntl}}
+                <FormattedMessage {...messages.title} />
+                {{else}}
+                <span>{{name}}</span>
+                {{/if}}
             </div>
         </React.Fragment>
     );

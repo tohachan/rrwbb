@@ -35,7 +35,7 @@ global.fetch = require('node-fetch');
 // intl
 import ConnectedIntlProvider from 'shared/containers/ConnectedIntlProvider';
 import { changeMessages, setLocale } from 'shared/containers/ConnectedIntlProvider/actions';
-import { DEFAULT_LOCALE } from 'shared/containers/ConnectedIntlProvider/constants';
+import { DEFAULT_LOCALE, LOCALE_TO_LANG } from 'shared/containers/ConnectedIntlProvider/constants';
 import * as path from 'path';
 import { glob } from 'glob';
 import { readFileSync } from 'fs';
@@ -66,6 +66,7 @@ export default ({ clientStats, hot }) => (req, res, next) => {
         : { statsFile: clientStats };
 
     const locale = req.query.locale || req.cookies.locale || DEFAULT_LOCALE;
+    const lang = LOCALE_TO_LANG[locale] || 'en';
     const messages = translations[locale];
 
     // We can get all matched routes if we need
@@ -132,18 +133,18 @@ export default ({ clientStats, hot }) => (req, res, next) => {
 
             let html = `
                 <!doctype html>
-                <html lang="en">
+                <html lang="${lang}">
                     <head>
                         ${helmet.title.toString()}
                         ${helmet.meta.toString()}
                         ${helmet.link.toString()}
 
                         ${styleTag}
-
-                        <script>window.__INITIAL__DATA__ = ${JSON.stringify(initialState)}</script>
                     </head>
                     <body>
                         <section class="hero is-fullheight" id="app">${component}</section>
+
+                        <script>window.__INITIAL__DATA__ = ${JSON.stringify(initialState)}</script>
                         ${scriptTags}
                     </body>
                 </html>`;

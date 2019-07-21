@@ -5,25 +5,23 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-
 {{#if withRedux}}
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-
 import { WithReducer } from 'shared/components/WithReducer';
-
 import {{name}}Reducer from './reducer';
 {{/if}}
 {{#if withSaga}}
 import { WithSaga } from 'shared/components/WithSaga';
-
 import {{lowerCase name}}Saga from './saga';
 {{/if}}
-
+{{#if withIntl}}
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+{{/if}}
 {{#if withStyles}}
 import "./styles.scss";
 {{/if}}
-
 {{#if withRedux}}
 import {
     defaultAction,
@@ -39,7 +37,11 @@ function {{name}}() {
 
             <section className="section {{name}}">
                 <div className="container">
+                    {{#if withIntl}}
+                    <h2 className="title is-2"><FormattedMessage {...messages.title} /></h2>
+                    {{else}}
                     <h2 className="title is-2">{{name}}</h2>
+                    {{/if}}
                 </div>
             </section>
         </React.Fragment>

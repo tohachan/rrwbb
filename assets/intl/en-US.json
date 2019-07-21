@@ -1,5 +1,5 @@
 {
-    "main.title": "Yet another Setup",
-    "meta.title": "Another RRWBB setup with SSR and HMR",
-    "meta.description": "Yet another RRWBB setup with SSR, HMR and code splitting"
+  "main.title": "Yet another Setup",
+  "meta.description": "Yet another RRWBB setup with SSR, HMR and code splitting",
+  "meta.title": "Another RRWBB setup with SSR and HMR"
 }

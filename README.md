@@ -43,7 +43,6 @@ Required node >=9.0 && <12.4 since right now node-sass have some problem to inst
 ## Todo
 - Tests
 - Storybook
-- Close to real world i18n usage
 - More sample pages
 - Better requests handler
 - PWA

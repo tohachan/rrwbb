@@ -33,6 +33,12 @@ module.exports = {
             message:
                 'Make loadable?',
         },
+        {
+            type: 'confirm',
+            name: 'withIntl',
+            default: true,
+            message: 'Add i18n?',
+        },
     ],
     actions: data => {
         const actions = [
@@ -57,6 +63,14 @@ module.exports = {
                 type: 'add',
                 path: COMPONENTS_BASE_PATH + '{{name}}/styles.scss',
                 templateFile: './component/styles.scss.hbs',
+                abortOnFail: true,
+            });
+        }
+        if (data.withIntl) {
+            actions.push({
+                type: 'add',
+                path: COMPONENTS_BASE_PATH + '{{name}}/messages.js',
+                templateFile: './component/messages.js.hbs',
                 abortOnFail: true,
             });
         }

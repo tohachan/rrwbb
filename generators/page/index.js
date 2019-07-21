@@ -50,6 +50,12 @@ module.exports = {
             default: true,
             message: 'Add saga?',
         },
+        {
+            type: 'confirm',
+            name: 'withIntl',
+            default: true,
+            message: 'Add i18n?',
+        },
     ],
     actions: data => {
         const actions = [
@@ -102,6 +108,15 @@ module.exports = {
                 type: 'add',
                 path: PAGES_BASE_PATH + '{{name}}/saga.js',
                 templateFile: './page/saga.js.hbs',
+                abortOnFail: true,
+            });
+        }
+
+        if (data.withIntl) {
+            actions.push({
+                type: 'add',
+                path: PAGES_BASE_PATH + '{{name}}/messages.js',
+                templateFile: './page/messages.js.hbs',
                 abortOnFail: true,
             });
         }
