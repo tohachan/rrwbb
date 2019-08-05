@@ -26,7 +26,7 @@ const config = {
         path: path.join(appDirectory, 'build', 'public'),
         filename: '[name].bundle.js',
         chunkFilename: '[contenthash].js',
-        publicPath: './build/public/'
+        publicPath: '/build/public/'
     },
 
     devtool: 'hidden-source-map',

@@ -1,61 +1,51 @@
 /**
- * Page {{name}}
+ * Page SubPage
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-{{#if withRedux}}
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+
+import { renderRoutes } from 'react-router-config';
+
 import { WithReducer } from 'shared/components/WithReducer';
-import {{name}}Reducer from './reducer';
-{{/if}}
-{{#if withSaga}}
+import SubPageReducer from './reducer';
 import { WithSaga } from 'shared/components/WithSaga';
-import {{lowerCase name}}Saga from './saga';
-{{/if}}
-{{#if withIntl}}
+import subpageSaga from './saga';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-{{/if}}
-{{#if withStyles}}
 import './styles.scss';
-{{/if}}
-{{#if withRedux}}
 import {
     defaultAction,
 } from './actions';
-{{/if}}
 
-function {{name}}() {
+function SubPage({ route }) {
     return (
         <React.Fragment>
             <Helmet>
-                <title>{{name}}</title>
+                <title>SubPage</title>
             </Helmet>
 
-            <section className="section {{name}}">
+            <section className="section SubPage">
                 <div className="container">
-                    {{#if withIntl}}
                     <h2 className="title is-2"><FormattedMessage {...messages.title} /></h2>
-                    {{else}}
-                    <h2 className="title is-2">{{name}}</h2>
-                    {{/if}}
+
+                    {renderRoutes(route.routes)}
                 </div>
             </section>
         </React.Fragment>
     );
 }
 
-{{name}}.propTypes = {
+SubPage.propTypes = {
 
-}
+};
 
-{{#if withRedux}}
 const mapStateToProps = state => {
     return {
-        {{lowerCase name}}: state.{{lowerCase name}},
+        subpage: state.subpage,
     };
 };
 
@@ -70,18 +60,15 @@ const withConnect = connect(
     mapDispatchToProps,
 );
 
-{{name}}.propTypes = {
-    {{lowerCase name}}: PropTypes.object,
+SubPage.propTypes = {
+    route: PropTypes.object,
+    routes: PropTypes.array,
+    subpage: PropTypes.object,
     dispatch: PropTypes.func,
 };
 
 export default compose(
-    WithReducer('{{lowerCase name}}', {{name}}Reducer),
-    {{#if withSaga}}
-    WithSaga('{{lowerCase name}}', {{lowerCase name}}Saga),
-    {{/if}}
+    WithReducer('subpage', SubPageReducer),
+    WithSaga('subpage', subpageSaga),
     withConnect,
-)({{name}});
-{{else}}
-export default {{name}};
-{{/if}}
+)(SubPage);

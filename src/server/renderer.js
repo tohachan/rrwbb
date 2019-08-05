@@ -17,7 +17,7 @@ import { Provider } from 'react-redux';
 import reduxEnhancersAll from 'shared/reduxEnhancersMap';
 
 // Routes
-// import { matchRoutes } from 'react-router-config';
+import { matchRoutes } from 'react-router-config';
 import { StaticRouter as Router, matchPath } from 'react-router-dom';
 import Routes from 'shared/Routes';
 
@@ -69,12 +69,9 @@ export default ({ clientStats, hot }) => (req, res, next) => {
     const lang = LOCALE_TO_LANG[locale] || 'en';
     const messages = translations[locale];
 
-    // We can get all matched routes if we need
-    // const matchedRoutes = matchRoutes(Routes, req.url);
-    // console.log('matchedRoutes: ', matchedRoutes);
-
-    // But for start it's not always necessary
-    const currentRoute = Routes.find(route => matchPath(req.url, route)) || {};
+    const matchedRoutes = matchRoutes(Routes, req.url);
+    const routeData = matchedRoutes.find(item => req.url === item.match.path) || {};
+    const currentRoute = routeData ? routeData.route || {} : {};
 
     const asyncReducer = reduxEnhancersAll[currentRoute.path] ? reduxEnhancersAll[currentRoute.path]['asyncReducer'] : undefined;
     const dataLoaders = reduxEnhancersAll[currentRoute.path] ? reduxEnhancersAll[currentRoute.path]['dataLoaders'] : undefined;

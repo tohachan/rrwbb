@@ -67,6 +67,15 @@ function Nav (props) {
                             onMouseOver={() => FullPage.preload()}
                         >Full Page</Link>
 
+                        <div className="navbar-item has-dropdown is-hoverable">
+                            <Link className="navbar-item" to="/sub">Sub page</Link>
+
+                            <div className="navbar-dropdown">
+                                <Link className="navbar-item" to="/sub/foo">Foo</Link>
+                                <Link className="navbar-item" to="/sub/bar">Bar</Link>
+                            </div>
+                        </div>
+
                         <span className="navbar-item">
                             <a
                                 target="_blank"

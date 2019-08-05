@@ -11,6 +11,9 @@ import Main from 'shared/containers/pages/Main/loadable';
 import Static from 'shared/containers/pages/Static/Static';
 import LoadablePage from 'shared/containers/pages/LoadablePage/loadable';
 import FullPage from 'shared/containers/pages/FullPage/loadable';
+import SubPage from 'shared/containers/pages/SubPage/loadable';
+import SubFooPage from 'shared/containers/pages/SubFooPage/loadable';
+import SubBarPage from 'shared/containers/pages/SubBarPage/loadable';
 /* route generator import anchor */
 // don't remove ^ generator anchor above in order route generator to work
 
@@ -37,6 +40,20 @@ const Routes = [
     {
         path: '/fullpage',
         component: FullPage,
+    },
+    {
+        path: '/sub',
+        component: SubPage,
+        routes: [
+            {
+                path: '/sub/foo',
+                component: SubFooPage
+            },
+            {
+                path: '/sub/bar',
+                component: SubBarPage
+            },
+        ]
     },
     /* route generator anchor */
     // don't remove ^ generator anchor above in order route generator to work
