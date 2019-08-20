@@ -2,6 +2,7 @@
   "SubBarPage.title": "Страница SubBarPage",
   "SubFooPage.title": "Страница SubFooPage",
   "SubPage.title": "Страница SubPage",
+  "main.react": "16.9.0 с поддержкой хуков",
   "main.title": "Очередной стартер",
   "meta.description": "Очередной RRWBB стартер с поддержкой SSR, HMR и разделением кода",
   "meta.title": "Очередной RRWBB стартер с плюшками"

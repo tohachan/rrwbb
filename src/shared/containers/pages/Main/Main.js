@@ -41,7 +41,7 @@ function Main () {
                             For another project
                         </h2>
                         <h2 className="subtitle">
-                            React 16.8.6 | redux | Webpack 4 | Babel 7 | Bulma
+                            React 16.9.0 | redux | Webpack 4 | Babel 7 | Bulma
                         </h2>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ function Main () {
                                     <FaReact /> <strong>React</strong>
                                 </p>
                                 <p className="p-l-lg">
-                                    16.8.6 With hooks support
+                                    <FormattedMessage {...messages.react} />
                                 </p>
                             </li>
                             <li>

@@ -2,6 +2,7 @@
   "SubBarPage.title": "SubBarPage page",
   "SubFooPage.title": "SubFooPage page",
   "SubPage.title": "SubPage page",
+  "main.react": "16.9.0 With hooks support",
   "main.title": "Yet another Setup",
   "meta.description": "Yet another RRWBB setup with SSR, HMR and code splitting",
   "meta.title": "Another RRWBB setup with SSR and HMR"

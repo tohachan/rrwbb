@@ -25,7 +25,7 @@ Required node >=9.0 && <12.4 since right now node-sass have some problem to inst
 - webpack 4
 - babel 7
 - webpack dev/hot/hot-server middlewares for comfortable development
-- React 16.8.6
+- React 16.9.0
 - Redux with persist support
 - Redux saga with data-preload on server side
 - React router connected to redux
