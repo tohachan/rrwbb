@@ -86,6 +86,7 @@
         "@loadable/component": "^5.10.2",
         "@loadable/server": "^5.10.2",
         "bulma": "^0.7.5",
+        "classnames": "^2.2.6",
         "compression": "^1.7.4",
         "connected-react-router": "^6.5.2",
         "cookie-parser": "^1.4.4",

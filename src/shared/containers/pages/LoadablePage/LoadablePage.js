@@ -5,6 +5,7 @@
 import React from 'react';
 import NoSsrChunk from 'shared/containers/pages/LoadablePage/NoSsrChunkLoader';
 import './loadable_page.scss';
+import cx from 'classnames';
 
 function LoadablePage () {
     return (
@@ -20,7 +21,7 @@ function LoadablePage () {
                 <div className="box">
                     <h3 className="title">Static data from loadable components</h3>
                     <h4 className="title subtitle">This data will be <strong>outside</strong> container chunk and <strong>not</strong> preloaded by server</h4>
-                    <h4 className="subtitle">Can use this if content is not important for SEO</h4>
+                    <h4 className={cx('subtitle', { 'subtitle_condition': true })}>Can use this if content is not important for SEO</h4>
                     <NoSsrChunk />
                     <NoSsrChunk />
                     <hr/>

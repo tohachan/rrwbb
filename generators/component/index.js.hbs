@@ -12,17 +12,15 @@ import messages from './messages';
 import "./styles.scss";
 {{/if}}
 
-function {{name}}() {
+function {{name}} (props) {
     return (
-        <React.Fragment>
-            <div class="{{name}}">
-                {{#if withIntl}}
-                <FormattedMessage {...messages.title} />
-                {{else}}
-                <span>{{name}}</span>
-                {{/if}}
-            </div>
-        </React.Fragment>
+        <div className="{{name}}">
+            {{#if withIntl}}
+            <FormattedMessage {...messages.title} />
+            {{else}}
+            <span>{{name}}</span>
+            {{/if}}
+        </div>
     );
 }
 
