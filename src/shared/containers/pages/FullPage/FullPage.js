@@ -24,13 +24,16 @@ import { doGetPost } from 'shared/containers/App/saga';
 import fullpageSaga, { doGetComments, doGetPosts } from './saga';
 
 import { getPost } from 'shared/containers/App/actions';
-import { getComments, getPosts } from './actions';
+import {
+    commentsRoutine,
+    postsRoutine,
+} from './actions';
 
 import TextPlaceholder from 'shared/components/TextPlaceholder';
 
 function FullPage (props) {
     useEffect(() => {
-        props.dispatch(getPosts());
+        props.postsRoutine();
     }, []);
 
     const { posts, comments, commentsLoading } = props.fullpage;
@@ -81,7 +84,7 @@ function FullPage (props) {
 
                         <div>
                             <button
-                                onClick={() => props.dispatch(getComments())}
+                                onClick={() => props.commentsRoutine()}
                                 className={'button is-info' + (commentsLoading ? ' is-loading' : '')}
                             >Get them!</button>
                         </div>
@@ -145,11 +148,10 @@ const mapStateToProps = state => {
     };
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        dispatch,
-    };
-}
+const mapDispatchToProps = {
+    commentsRoutine,
+    postsRoutine,
+};
 
 const withConnect = connect(
     mapStateToProps,
@@ -159,6 +161,8 @@ const withConnect = connect(
 FullPage.propTypes = {
     fullpage: PropTypes.object,
     dispatch: PropTypes.func,
+    postsRoutine: PropTypes.func,
+    commentsRoutine: PropTypes.func,
 };
 
 export default compose(

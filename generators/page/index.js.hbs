@@ -2,7 +2,7 @@
  * Page {{name}}
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 {{#if withRedux}}
@@ -24,11 +24,17 @@ import './styles.scss';
 {{/if}}
 {{#if withRedux}}
 import {
-    defaultAction,
+    {{lowerCase name}}Routine,
 } from './actions';
 {{/if}}
 
-function {{name}}() {
+function {{name}} (props) {
+    {{#if withRedux}}
+    useEffect(() => {
+        props.{{lowerCase name}}Routine();
+    }, []);
+    {{/if}}
+
     return (
         <React.Fragment>
             <Helmet>
@@ -59,10 +65,8 @@ const mapStateToProps = state => {
     };
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        dispatch,
-    };
+const mapDispatchToProps = {
+    {{lowerCase name}}Routine,
 }
 
 const withConnect = connect(

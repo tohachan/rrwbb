@@ -1,6 +1,6 @@
 import {
-    DEFAULT,
-} from './constants';
+    {{lowerCase name}}Routine,
+} from './actions';
 
 const defaultState = {
     data: ''
@@ -13,8 +13,8 @@ const initialState = (typeof window !== 'undefined')
 export default(state = initialState, action) => {
     switch (action.type) {
 
-        case DEFAULT:
-            return Object.assign({}, state, { data: action.data });
+        case {{lowerCase name}}Routine.SUCCESS:
+            return Object.assign({}, state, { data: action.payload });
 
         default:
             return state;
