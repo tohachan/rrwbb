@@ -137,6 +137,16 @@ export default ({ clientStats, hot }) => (req, res, next) => {
                         ${helmet.link.toString()}
 
                         ${styleTag}
+
+                        <!-- Global site tag (gtag.js) - Google Analytics -->
+                        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLHXPX8TGM"></script>
+                        <script>
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+                        
+                          gtag('config', 'G-DLHXPX8TGM');
+                        </script>
                     </head>
                     <body>
                         <section class="hero is-fullheight" id="app">${component}</section>
